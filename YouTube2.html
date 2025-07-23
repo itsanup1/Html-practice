@@ -11,6 +11,7 @@
     <link href="Common.css" rel="stylesheet">
     <link href="Content.css" rel="stylesheet">
     <link href="Sidebar.css" rel="stylesheet">
+    <link href="Responsive.css" rel="stylesheet">
   </head>
   
   <body>
@@ -24,20 +25,32 @@
       
       <div class="middle-section">
         <input class="search-box" placeholder="Search">
-        <button class="search-button"><img class="search-icon" src="icons/search-icon.svg" >
+        <button class="search-button">
+          <img class="search-icon" src="icons/search-icon.svg" >
+          <div class="tooltip">Search</div>
         </button>
-        <img class="mic-icon" src="icons/voice-search-icon.svg">
+        <button class="mic-button">
+          <img class="mic-icon" src="icons/voice-search-icon.svg">
+          <div class="tooltip">Search with your voice</div>
+        </button>
       </div>
       
       <div class="right-section">
-        <img class="upload-icon" src="icons/upload.svg">
+        <div class="upload-icon-container">
+          <img class="upload-icon" src="icons/upload.svg">
+          <div class="tooltip">Upload</div>
+        </div>
         <div class="notification">
           <img class="notification-icon" src="icons/notifications.svg">
+          <div class="tooltip">Notifications</div>
           <div class="number">
             3
           </div>
         </div>
-        <img class="app-icon" src="icons/youtube-apps.svg">
+        <div class="app">
+          <img class="app-icon" src="icons/youtube-apps.svg">
+          <div class="tooltip">YouTube Apps</div>
+        </div>
         <img class="profile-icon" src="icons/channels4_profile.jpg">
       </div>
     </div>
