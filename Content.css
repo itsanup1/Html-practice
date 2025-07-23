@@ -1,5 +1,13 @@
     .video-preview{
       width:100%;
+      background-color:white;
+      border-radius:4px;
+      padding: 6px;
+      padding-bottom: 8px;
+      transition: background-color 0.2s;
+    }
+    .video-preview:hover{
+      background-color: #e6e6e6;
     }
     
     .video-grid {
