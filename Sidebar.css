@@ -13,7 +13,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      gap: 4px;
+      gap: 6px;
       transition: background-color 0.15s;
     }
     .sidebar-box:hover{
