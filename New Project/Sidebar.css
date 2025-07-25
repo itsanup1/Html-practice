@@ -1,0 +1,28 @@
+ .sidebar{
+   display: flex;
+   flex-direction: column;
+   background-color: white;
+   position: fixed;
+   padding: 10px;
+   padding-top: 30px;
+   left: 10px;
+   top: 104px;
+   bottom: 10px;
+   border-radius: 8px;
+   border: 1px solid black;
+   box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+   align-items: center;
+   
+ }
+ .sidebar-box{
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+ }
+ .sidebar-box div{
+   font-size: 20px;
+   font-weight: 600;
+ }
+ .sidebar-box img{
+   height: 30px;
+ }
