@@ -1,0 +1,155 @@
+    .header{
+      display: flex;
+      height:70px;
+      position: fixed;
+      justify-content: space-between;
+      left: 0;
+      right: 0;
+      top: 0;
+      border: 1px solid #cbcbcb;
+      z-index: 150;
+      background-color: white;
+    }
+    .left-section{
+      display: flex;
+      align-items: center;
+    }
+    .small-icons{
+      display: flex;
+      margin-left: auto;
+      gap: 14px;
+      margin-right: 10px;
+      font-weight: bold;
+    }
+    .menu-icon{
+      height: 25px;
+      margin: 20px 25px 20px 24px;
+    }
+    .logo{
+      height: 25px;
+      margin: 20px 30px 20px 25px;
+    }
+    .middle-section{
+      display: flex;
+      align-items: center;
+      flex: 1;
+      height: 70px;
+    }
+    .search-box{
+      flex:1;
+      height: 36px;
+      padding-left: 14px;
+      font-size: 16px;
+      border: 1px solid gray;
+      border-radius: 1px;
+      margin-left: 30px;
+      width: 0;
+    }
+    .search-button{
+      display: flex;
+      background-color: #f5f5f5;
+      position: relative;
+      width:60px;
+      height:40px;
+      margin-right: 20px;
+      border-radius: 1px;
+      border: 1px solid gray;
+      align-items: center;
+      justify-content: center;
+    }
+    .small-search-button,.small-notification-icon, .small-cast-icon {
+      height: 25px;
+      margin: 0;
+    }
+    .search-icon{
+      height: 25px;
+    }
+    .mic-button{
+      display: flex;
+      background-color: #f5f5f5;
+      height: 40px;
+      width: 40px;
+      border: none; 
+      border-radius: 50%; 
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      margin-right: 35px;
+      position: relative;
+    }
+    
+    .mic-icon{
+      align-items: center;
+      height: 25px;
+      width: 25px;
+    }
+    
+    .mic-button .tooltip, .search-button .tooltip, .notification .tooltip, .app .tooltip, .upload-icon-container .tooltip{
+      position: absolute;
+      background-color: black;
+      opacity: 0;
+      color: white;
+      font-size: 18px;
+      padding: 10px;
+      bottom: -46px;
+      pointer-events: none;
+      transition: opacity 0.15s;
+      border-radius: 2px;
+      white-space: nowrap;
+      left: 50%;
+      transform: translateX(-50%);
+      align-items: center;
+    }
+
+    .mic-button:hover .tooltip, .search-button:hover .tooltip, .notification:hover .tooltip, .app:hover .tooltip, .upload-icon-container:hover .tooltip{
+      opacity: 0.7;
+    }
+
+    .right-section{
+      display: flex;
+      align-items: center;
+      height: 70px;
+    }
+    .upload-icon-container{
+      height:25px;
+      margin: 0 15px;
+      position: relative;
+    }
+    .upload-icon{
+      height: 100%;
+    }
+    .notification-icon{
+      height:25px;
+      margin: 0 15px;
+    }
+    .notification{
+      position: relative;
+    }
+    .number{
+      position: absolute;
+      top: -1px;
+      right: 14px;
+      background-color: red;
+      color: white;
+      border:none;
+      border-radius: 50%;
+      font-size: 5px;
+      padding: 2.5px 4.5px 2.5px 4.5px ;
+    }
+    .app{
+      position: relative;
+      height:25px;
+      margin: 0 15px;
+    }
+    .app-icon{
+      height: 100%;
+    }
+    .profile-icon{
+      height: 36px;
+      width: 36px;
+      object-fit: cover;
+      border:none;
+      border-radius: 50%;
+      margin: 0 15px;
+    }
+    
