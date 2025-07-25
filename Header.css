@@ -1,8 +1,8 @@
     .header{
       display: flex;
       height:70px;
-      justify-content: space-between;
       position: fixed;
+      justify-content: space-between;
       left: 0;
       right: 0;
       top: 0;
@@ -13,6 +13,13 @@
     .left-section{
       display: flex;
       align-items: center;
+    }
+    .small-icons{
+      display: flex;
+      margin-left: auto;
+      gap: 14px;
+      margin-right: 10px;
+      font-weight: bold;
     }
     .menu-icon{
       height: 25px;
@@ -33,7 +40,6 @@
       height: 36px;
       padding-left: 14px;
       font-size: 16px;
-      font-family: Roboto,Arial;
       border: 1px solid gray;
       border-radius: 1px;
       margin-left: 30px;
@@ -50,6 +56,10 @@
       border: 1px solid gray;
       align-items: center;
       justify-content: center;
+    }
+    .small-search-button,.small-notification-icon, .small-cast-icon {
+      height: 25px;
+      margin: 0;
     }
     .search-icon{
       height: 25px;
@@ -76,7 +86,6 @@
     
     .mic-button .tooltip, .search-button .tooltip, .notification .tooltip, .app .tooltip, .upload-icon-container .tooltip{
       position: absolute;
-      font-family: Roboto,Arial;
       background-color: black;
       opacity: 0;
       color: white;
@@ -103,8 +112,7 @@
     }
     .upload-icon-container{
       height:25px;
-      margin-right: 15px;
-      margin-left: 15px;
+      margin: 0 15px;
       position: relative;
     }
     .upload-icon{
@@ -112,8 +120,7 @@
     }
     .notification-icon{
       height:25px;
-      margin-left: 15px;
-      margin-right: 15px;
+      margin: 0 15px;
     }
     .notification{
       position: relative;
@@ -122,7 +129,6 @@
       position: absolute;
       top: -1px;
       right: 14px;
-      font-family: Roboto,Arial;
       background-color: red;
       color: white;
       border:none;
@@ -133,8 +139,7 @@
     .app{
       position: relative;
       height:25px;
-      margin-right: 15px;
-      margin-left: 15px;
+      margin: 0 15px;
     }
     .app-icon{
       height: 100%;
@@ -145,7 +150,6 @@
       object-fit: cover;
       border:none;
       border-radius: 50%;
-      margin-left: 15px;
-      margin-right: 15px;
+      margin: 0 15px;
     }
     

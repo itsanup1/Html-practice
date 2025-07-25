@@ -33,7 +33,6 @@
       background-color: black;
       color: white;
       border-radius:2px;
-      font-family: Roboto,Arial;
       font-weight: 500;
       font-size: 12px;
     }
@@ -76,8 +75,10 @@
       font-size: 14px;
       font_weight:600;
       margin-top: 10px;
+      color: rgb(96,96,96);
     }
     .video-stats{
       font-size: 12px;
       margin-top: 5px;
+      color: rgb(96,96,96);
     }
