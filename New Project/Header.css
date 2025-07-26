@@ -95,6 +95,14 @@
    padding: 0 15px;
  }
  .right-section .quick-access{
-   background-color: grey;
+   padding: 10px;
+   border: 1px solid transparent;
+   box-sizing: border-box;
+   border-radius: 6px;
+ }
+ .right-section .quick-access:hover{
+   transform: translate(-3px);
+   border: 1px solid #0a0a0a;
+   box-shadow: 3.5px 5px 5px rgba(16,163,255,0.6);
  }
  
