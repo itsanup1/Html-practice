@@ -99,10 +99,11 @@
    border: 1px solid transparent;
    box-sizing: border-box;
    border-radius: 6px;
+   transition: all 0.2s;
  }
  .right-section .quick-access:hover{
    transform: translate(-3px);
    border: 1px solid #0a0a0a;
-   box-shadow: 3.5px 5px 5px rgba(16,163,255,0.6);
+   box-shadow: 4px 5px 4px rgba(16,163,255,0.6);
  }
  
