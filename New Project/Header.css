@@ -107,7 +107,7 @@
    box-shadow: 4px 5px 4px rgba(16,163,255,0.6);
  }
  .right-section .quick-access:active{
-   transform: translate(-1px);
+   transform: translate(-2px);
    box-shadow: none;
  }
  
