@@ -50,15 +50,25 @@
    width: 85%;
    font-size: 25px;
    padding-left: 30px;
+   padding-right:20px;
    font-family: Lato,Arial;
    height:55px;
-   border: 2px solid gray;
+   border: 1.3px solid gray;
    border-bottom-left-radius: 30px;
    border-bottom-right-radius: 30px;
    border-top-left-radius: 30px;
    border-top-right-radius: 30px;
-   
+   transition: all 0.2s;
  }
+ .search-bar:focus {
+    outline: none;
+    box-shadow: 3.5px 5px 5px rgba(16,163,255,0.6);
+    transform: translate(-3px);
+  }
+  .search-button {
+    -webkit-tap-highlight-color: transparent;
+  }
+  
  .search-button {
   height: 55px;
   width: 60px;
@@ -66,9 +76,10 @@
   justify-content: center;
   align-items: center;
   background-color: white;
-  border: 2px solid gray;
+  border: 1.3px solid gray;
   border-radius: 30px;
   cursor: pointer;
+  transition: all 0.2s;
  }
  .search-button img{
    margin: 0;
