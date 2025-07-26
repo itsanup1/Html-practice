@@ -32,7 +32,7 @@
    font-family: Lato,Roboto,Arial;
    font-weight: 700;
    color: #10a3ff;
-   text-shadow: 2px 2px 1px rgba(0,0,0,0.2);
+   text-shadow: 2px 2px 1px rgba(0,0,0,0.8);
  }
  .middle-section{
    flex: 1;
