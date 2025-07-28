@@ -17,11 +17,20 @@
    width: 340px;
    height: 100%;
    display: flex;
+   gap: 50px;
+ }
+ .menu-icon{
+   margin-left: 24px;
+   height: 100%;
+   display: none;
+   align-items: center;
+ }
+ .menu-icon img{
+   height: 40px;
  }
  .site-logo{
-   margin-left: 50px;
-   display: flex;
    align-items: center;
+   display: flex;
    height: 100%;
  }
  .logo img{
@@ -32,7 +41,7 @@
    font-family: Lato,Roboto,Arial;
    font-weight: 700;
    color: #10a3ff;
-   text-shadow: 2px 2px 1px rgba(0,0,0,0.8);
+   text-shadow: 2px 2px 1px rgba(0,0,0,0.2);
  }
  .middle-section{
    flex: 1;
@@ -91,23 +100,23 @@
    width: 320px;
    align-items: center;
    justify-content: space-between;
-   gap: 12px;
+   gap: 10px;
    padding: 0 15px;
+   
  }
- .right-section .quick-access{
-   padding: 10px;
-   border: 1px solid transparent;
-   box-sizing: border-box;
-   border-radius: 6px;
+ .small-search{
+   display:none;
+   height: 30px;
+   justify-content: center;
+   align-items: center;
+   background-color: white;
+   border: 1.3px solid gray;
+   border-radius: 30px;
+   cursor: pointer;
    transition: all 0.2s;
  }
- .right-section .quick-access:hover{
-   transform: translate(-3px);
-   border: 1px solid #0a0a0a;
-   box-shadow: 4px 5px 4px rgba(16,163,255,0.6);
- }
- .right-section .quick-access:active{
-   transform: translate(-2px);
-   box-shadow: none;
+ .small-search img{
+   height:25px;
+   padding:0 2.5px;
  }
  

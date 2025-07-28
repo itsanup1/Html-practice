@@ -8,11 +8,18 @@
     
     <link href="Header.css" rel="stylesheet">
     <link href="Sidebar.css" rel="stylesheet">
+    <link href="Responsive.css" rel="stylesheet">
     
   </head>
   <body>
     <header class="header">
       <div class="left-section">
+        <div class="menu-icon">
+          <img src="icons/hamburger-menu.svg" 
+          onclick="
+           sidebarShow();
+          ">
+        </div>
         <div class="site-logo">
           <div class="logo">
             <img  src="logo.png">
@@ -37,7 +44,9 @@
         <div class="quick-access">
           Instagram
         </div>
-        
+        <div class="small-search">
+          <img src="icons/search-icon.svg">
+        </div>
       </div>
       
     </header>
@@ -64,5 +73,26 @@
         <div>Socials</div>
       </div>
     </nav>
+    <div id="overlay" class="overlay"></div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const hamburger = document.querySelector(".menu-icon");
+        const sidebar = document.querySelector(".sidebar");
+        const overlay = document.getElementById("overlay");
+    
+        function openSidebar() {
+          sidebar.classList.add("active");
+          overlay.classList.add("active");
+        }
+    
+        function closeSidebar() {
+          sidebar.classList.remove("active");
+          overlay.classList.remove("active");
+        }
+    
+        hamburger.addEventListener("click", openSidebar);
+        overlay.addEventListener("click", closeSidebar);
+      });
+    </script>
   </body>
 </html>

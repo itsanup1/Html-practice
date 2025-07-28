@@ -1,0 +1,33 @@
+  @media (max-width: 700px){
+    .sidebar{
+      left: -120%;
+    }
+    .menu-icon{
+      display: flex;
+    }
+    .middle-section{
+      display: none;
+    }
+    .left-section{
+      gap: 20px;
+    }
+    .right-section .quick-access{
+      display: none;
+    }
+    .left-section img, .left-section div {
+      height:30px;
+      font-size: 20px;
+    }
+    .left-section{
+      align-items: center;
+    }
+    .right-section{
+      justify-content: right;
+    }
+    .small-search{
+      display: flex;
+    }
+    .header{
+      height: 60px;
+    }
+  }
