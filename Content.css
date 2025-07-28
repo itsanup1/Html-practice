@@ -1,0 +1,12 @@
+  .content {
+    padding: 10px;
+    display: block;
+    margin-top: 104px;
+    padding-bottom: 2000px;
+    margin-left: 160px;
+  }
+  .content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
