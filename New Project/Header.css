@@ -7,11 +7,21 @@
    left: 10px;
    height: 84px;
    align-items: center;
-   padding-left: 20px;
+   padding-left: 8px;
    border-radius: 8px;
    border: 1px solid black;
    box-shadow: 0px 2px 5px rgba(0,0,0,0.4);
    gap: 10px;
+   z-index: 1000;
+ }
+ .header-back{
+   z-index: 999;
+   position: fixed;
+   top: 0;
+   right: 0;
+   left: 0;
+   height: 84px;
+   background-color: rgba(255,255,255,0.75);
  }
  .left-section{
    width: 340px;
@@ -20,10 +30,23 @@
    gap: 50px;
  }
  .menu-icon{
-   margin-left: 24px;
+   margin-left: 16px;
    height: 100%;
    display: none;
    align-items: center;
+   border: 1px solid transparent;
+   border-radius: 6px;
+   padding: 4px 5px;
+   transition: all 0.2s;
+ }
+ .menu-icon:hover{
+   border: 1px solid black;
+   transform: translate(-3px);
+   box-shadow: 4px 4px 4px rgba(16,163,255,0.6);
+ }
+ .menu-icon:active{
+   transform: translate(-2px);
+   box-shadow: none;
  }
  .menu-icon img{
    height: 40px;
@@ -126,7 +149,7 @@
  }
  .small-search{
    display:none;
-   height: 30px;
+   height: 35px;
    justify-content: center;
    align-items: center;
    background-color: white;
@@ -136,8 +159,8 @@
    transition: all 0.2s;
  }
  .small-search img{
-   height:25px;
-   padding:0 2.5px;
+   height:20px;
+   padding:0 7.5px;
  }
  .small-search{
     -webkit-tap-highlight-color: transparent;

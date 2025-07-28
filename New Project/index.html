@@ -11,17 +11,16 @@
     
     <link href="Header.css" rel="stylesheet">
     <link href="Sidebar.css" rel="stylesheet">
+    <link href="Content.css" rel="stylesheet">
     <link href="Responsive.css" rel="stylesheet">
     
   </head>
   <body>
+    <!--   Header   -->
     <header class="header">
       <div class="left-section">
         <div class="menu-icon">
-          <img src="icons/hamburger-menu.svg" 
-          onclick="
-           sidebarShow();
-          ">
+          <img id="menu-toggle" src="icons/hamburger-menu.svg">
         </div>
         <div class="site-logo">
           <div class="logo">
@@ -53,6 +52,11 @@
       </div>
       
     </header>
+    <div class="header-back">
+      
+    </div>
+    
+    <!--   SideBar    -->
     
     <nav class="sidebar">
       <div class="sidebar-box">
@@ -77,24 +81,28 @@
       </div>
     </nav>
     <div id="overlay" class="overlay"></div>
+    
+    <!--  CONTENT  -->
+    <div class="content">
+      <img src="Luffy2.jpeg">
+    </div>
+    
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        const hamburger = document.querySelector(".menu-icon");
+        const menuToggle = document.getElementById("menu-toggle");
         const sidebar = document.querySelector(".sidebar");
         const overlay = document.getElementById("overlay");
     
-        function openSidebar() {
-          sidebar.classList.add("active");
-          overlay.classList.add("active");
+        function toggleSidebar() {
+          sidebar.classList.toggle("active");
+          overlay.classList.toggle("active");
         }
     
-        function closeSidebar() {
+        menuToggle.addEventListener("click", toggleSidebar);
+        overlay.addEventListener("click", () => {
           sidebar.classList.remove("active");
           overlay.classList.remove("active");
-        }
-    
-        hamburger.addEventListener("click", openSidebar);
-        overlay.addEventListener("click", closeSidebar);
+        });
       });
     </script>
   </body>
