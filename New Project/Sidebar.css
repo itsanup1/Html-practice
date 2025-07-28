@@ -12,9 +12,10 @@
    box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
    align-items: center;
    transition: all 0.2s ease;
+   overflow-y: auto;
   }
   .sidebar.active{
-    left: 10px;
+    left: 5px;
   }
   .sidebar:hover{
     box-shadow: 2px 2px 5px rgba(16,163,255,0.5);
@@ -37,6 +38,10 @@
    border: 1px solid #0a0a0a;
    box-shadow: 3.5px 5px 5px rgba(16,163,255,0.6);
    transform: translate(-3px);
+ }
+ .sidebar-box:active{
+   transform: translate(-2px);
+   box-shadow: none;
  }
  .sidebar-box:hover img, .sidebar-box:hover div {
     transform: scale(1.1);
