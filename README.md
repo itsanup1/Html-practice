@@ -4,4 +4,4 @@ Access The YouTube clone on this link: https://youtube-clone-ujf.pages.dev
 
 Access The Rock-Paper-Scissors Project on this link: https://itsanup1.github.io/Html-practice/Rock-Paper-Scissors/
 
-Acces The Facebook Add Friend Layout: https://youtube-clone-ujf.pages.dev/Facebook
+Acces The Facebook Add Friend Layout: https://html-practice-646.pages.dev/Facebook
