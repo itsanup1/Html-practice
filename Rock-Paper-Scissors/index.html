@@ -15,12 +15,18 @@
         font-size: 20px;
         font-weight: 600;
       }
+      button {
+        outline: none;
+        box-shadow: none;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-focus-ring-color: transparent;
+      }
       .button-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
         flex-wrap: wrap;
-        gap: 10px;
+        gap: 15px;
         margin: 20px 0;
         align-items: center;
       }
@@ -29,19 +35,19 @@
         height: 70px;
         width: 70px;
         font-size: 16px;
-        border: 2px solid #333;
+        border: 2px solid white;
+        background-color: black;
         border-radius: 50%;
-        background-color: white;
         cursor: pointer;
         transition: background-color 0.3s;
+        transition: opacity 0.5s;
       }
-      
-      .button-container button:hover {
-        background-color: #ddd;
+      .button-container button:active{
+        opacity: 0.7;
       }
       
       .button-container .reset-btn {
-        width:220px;
+        width:235px;
         height: 50px;
         font-size: 30px;
         font-weight:bold;
@@ -66,9 +72,15 @@
         padding: 18px;
         border-radius: 6px;
       }
+      .playing-buttons{
+        display: flex;
+        gap: 15px;
+      }
       .playing-buttons img{
         height:50px;
+        
       }
+      
       .game-layout{
         width: 100%;
         display: flex;
