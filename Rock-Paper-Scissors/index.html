@@ -101,7 +101,7 @@
         <button class="reset-btn" onclick="resetScore()">Reset Score</button>
         <br>
         <div class="Scoreboard">
-          <p class="js-moves"></p>
+          <p class="js-moves">You <img src="icons/Rock.png" style="height:30px;"> v/s <img src="icons/Paper.png" style="height:30px;"> Computer</p>
           <p class="js-result"></p>
           <p class="js-score"></p>
         </div>
@@ -124,7 +124,7 @@
     
     updateeScore();
     showResult();
-    showMoves();
+    
     
     function saveScore() {
       localStorage.setItem('score', JSON.stringify(score));
@@ -142,8 +142,8 @@
     
     function showMoves(){
       const Moves = document.querySelector('.js-moves');
-      Moves.innerHTML = `You Picked: ${userChoice}<br>
-      Computer Picked: ${compChoice}`;
+      Moves.innerHTML = `You <img style= "height:30px;" src = "icons/${userChoice}.png"> : <img style= "height:30px;" src = "icons/${compChoice}.png">
+      Computer`;
     }
     function computerPick() {
       const randnum = Math.random();
