@@ -1,0 +1,23 @@
+.calc-container {
+  margin: 0;
+  padding: 20px;
+  width: 280px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.display-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.rows-container {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  background-color: transparent;
+}
