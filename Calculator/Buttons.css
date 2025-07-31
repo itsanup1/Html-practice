@@ -1,5 +1,7 @@
 .calc-container input {
   margin: 0;
+  font-size: 24px;
+  font-weight: bold;
   width: 100%;
   height: 60px;
   border: none;
@@ -33,7 +35,7 @@
 
 .number-button:active {
   transform: scale(0.95);
-  background-color: #cac9c9;
+  background-color: #e2e2e2;
 }
 
 .operation-button {

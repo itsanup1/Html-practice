@@ -9,33 +9,108 @@
   <body>
     <div class="calc-container">
       <div class="display-row">
-        <input type="text" readonly>
-        <button class="operation-button clear-button">c</button>
+        <input class="screen" type="text" readonly>
+        <button class="operation-button clear-button"
+        onclick="
+        clearContent();
+        ">c</button>
       </div>
       
       <div class="rows-container">
-        <button class="number-button">7</button>
-        <button class="number-button">8</button>
-        <button class="number-button">9</button>
-        <button class="operation-button">÷</button>
+        <button class="number-button"
+        onclick="
+        updateScreen(7);
+        ">7</button>
+        <button class="number-button"onclick="
+        updateScreen(8);
+        ">8</button>
+        <button class="number-button"
+        onclick="
+        updateScreen(9);
+        ">9</button>
+        <button class="operation-button"
+        onclick="
+        updateScreen(' ÷ ');
+        ">÷</button>
       </div>
       <div class="rows-container">
-        <button class="number-button">4</button>
-        <button class="number-button">5</button>
-        <button class="number-button">6</button>
-        <button class="operation-button">×</button>
+        <button class="number-button"
+        onclick="
+        updateScreen(4);
+        ">4</button>
+        <button class="number-button"
+        onclick="
+        updateScreen(5);
+        ">5</button>
+        <button class="number-button"
+        onclick="
+        updateScreen(6);
+        ">6</button>
+        <button class="operation-button"
+        onclick="
+        updateScreen(' × ');
+        ">×</button>
       </div>
       <div class="rows-container">
-        <button class="number-button">1</button>
-        <button class="number-button">2</button>
-        <button class="number-button">3</button>
-        <button class="operation-button">-</button>
+        <button class="number-button" 
+        onclick="
+        updateScreen(1);
+        ">1</button>
+        <button class="number-button"
+        onclick="
+        updateScreen(2);
+        ">2</button>
+        <button class="number-button"
+        onclick="
+        updateScreen(3);
+        ">3</button>
+        <button class="operation-button"
+        onclick="
+        updateScreen(' - ');
+        ">-</button>
       </div>
       <div class="rows-container">
-        <button class="zero-button number-button">0</button>
-        <button class="equal-button operation-button">=</button>
-        <button class="operation-button">+</button>
+        <button class="zero-button number-button"
+        onclick="
+        updateScreen(0);
+        ">0</button>
+        <button class="equal-button operation-button"
+        onclick="
+        calculateResult();
+        ">=</button>
+        <button class="operation-button"
+        onclick="
+        updateScreen(' + ');
+        ">+</button>
       </div>
     </div>
+    <script>
+      const screen = document.querySelector('.screen');
+    
+      function updateScreen(value) {
+        screen.value += value;
+      }
+    
+      function clearContent() {
+        screen.value = '';
+      }
+    
+      function calculateResult() {
+        try {
+
+          let expression = screen.value
+            .replace(/×/g, '*')
+            .replace(/÷/g, '/');
+    
+          expression = expression.replace(/\s+/g, '');
+  
+          const result = eval(expression);
+    
+          screen.value = result;
+        } catch (error) {
+          screen.value = 'Error';
+        }
+      }
+    </script>
   </body>
 </html>
