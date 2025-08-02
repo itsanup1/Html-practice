@@ -59,23 +59,33 @@
     
     <nav class="sidebar">
       <div class="sidebar-box">
-        <img src="icons/home.svg">
+        <div class="icon-container">
+          <img src="icons/home.svg">
+        </div>
         <div>Home</div>
       </div>
       <div class="sidebar-box">
-        <img src="icons/about-me.svg">
+        <div class="icon-container">
+          <img src="icons/about-me.svg">
+        </div>
         <div>About me</div>
       </div>
       <div class="sidebar-box">
-        <img src="icons/folder.svg">
+        <div class="icon-container">
+          <img src="icons/folder.svg">
+        </div>
         <div>Projects</div>
       </div>
       <div class="sidebar-box">
-        <img src="icons/contact.svg">
+        <div class="icon-container">
+          <img src="icons/contact.svg">
+        </div>
         <div>Contact me</div>
       </div>
       <div class="sidebar-box">
-        <img src="icons/social.svg">
+        <div class="icon-container">
+          <img src="icons/social.svg">
+        </div>
         <div>Socials</div>
       </div>
     </nav>
@@ -83,7 +93,18 @@
     
     <!--  CONTENT  -->
     <div class="content">
-      <img src="Luffy2.jpeg">
+      <section class="intro-section">
+        <h1>Welcome to My Portfolio</h1>
+        <p>
+          This website is your gateway to explore my personal and professional projects. From front-end experiments and web applications to design showcases and creative builds — everything lives here in one place.  
+        </p>
+        <p>
+          Whether you're a curious visitor, a fellow developer, or a potential collaborator, feel free to browse through my work, get to know what I'm passionate about, and see how I turn ideas into working products.  
+        </p>
+        <p>
+          More updates, projects, and interactive features are always on the way — so stick around and check back often!
+        </p>
+      </section>
     </div>
     
     <script>
@@ -96,7 +117,7 @@
           sidebar.classList.toggle("active");
           overlay.classList.toggle("active");
         }
-    
+        
         menuToggle.addEventListener("click", toggleSidebar);
         overlay.addEventListener("click", () => {
           sidebar.classList.remove("active");

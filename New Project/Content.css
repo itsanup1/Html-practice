@@ -1,12 +1,50 @@
   .content {
-    padding: 10px;
-    display: block;
+    padding: auto;
+    display: flex;
+    padding-left: 5px;
+    padding-right: 5px;
     margin-top: 94px;
-    padding-bottom: 2000px;
-    margin-left: 150px;
+    flex-wrap: wrap;
+    height: auto;
+    width: auto;
+    background-color: #fcfcfc;
+    overflow-x: hidden;
+    overflow-y: auto;
+    min-height: 100vh;
+  }
+  .title{
+    font-size: 50px;
   }
   .content img {
     max-width: 100%;
     height: auto;
     display: block;
+  }
+  .intro-section {
+     max-width: 800px;
+     margin: 40px auto;
+     padding: 20px;
+     text-align: center;
+     font-family: 'Lato', sans-serif;
+     color: #333;
+     background-color: white;
+     border-radius: 8px;
+     box-shadow: 0 0 5px rgba(0,0,0,0.4);
+  }
+  .intro-section p{
+    transition: all 0.25s ease;
+    line-height: 2;
+    font-size: 20px;
+  }
+  .intro-section h1{
+    transition: all 0.25s ease;
+    font-weight: 600;
+    font-size: 36px;
+  }
+  .intro-section p:hover{
+    transform: scale(1.08);
+  }
+  .intro-section h1:hover{
+    transform: scale(1.1);
+    
   }
