@@ -56,6 +56,15 @@
         color: white;
       }
       
+      .button-container .autoplay-button{
+        width: 235px;
+        height: 50px;
+        font-size: 30px;
+        font-weight: bold;
+        border-radius: 5px;
+        background-color: #0e8aff;
+        color: white;
+      }
       
       .Scoreboard{
         width: 90%;
@@ -78,7 +87,6 @@
       }
       .playing-buttons img{
         height:50px;
-        
       }
       
       .game-layout{
@@ -99,6 +107,7 @@
           <button onclick="playGame('Scissors')"><img src="icons/Scissors.png"></button>
         </div>
         <button class="reset-btn" onclick="resetScore()">Reset Score</button>
+        <button class="autoplay-button" onclick="autoplay();">Auto-Play</button>
         <br>
         <div class="Scoreboard">
           <p class="js-moves">You <img src="icons/Rock.png" style="height:30px;"> v/s <img src="icons/Paper.png" style="height:30px;"> Computer</p>
@@ -154,6 +163,7 @@
       } else {
         compChoice = 'Scissors';
       }
+      return compChoice;
     }
     
     function determineWinner(user, computer) {
@@ -167,6 +177,23 @@
         return 'You Win';
       } else {
         return 'You Lose';
+      }
+    }
+    let isAutoplay = false;
+    let intervalID;
+    function autoplay(){
+      if(!isAutoplay){
+        intervalID = setInterval(() => {
+          computerPick();
+          userChoice = computerPick();
+          playGame(userChoice);
+        }, 1000);
+        document.querySelector('.autoplay-button').innerHTML = 'Stop Auto-Play';
+        isAutoplay = true;
+      }else{
+        clearInterval(intervalID);
+        isAutoplay = false;
+        document.querySelector('.autoplay-button').innerHTML = 'Auto-Play';
       }
     }
     
@@ -207,7 +234,6 @@
       
       saveScore();
       updateeScore();
-      
     }
     
   </script>
