@@ -1,0 +1,74 @@
+.button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 20px 0;
+  align-items: center;
+}
+
+.button-container button {
+  height: 70px;
+  width: 70px;
+  font-size: 16px;
+  border: 1px solid gray;
+  background-color: black;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: opacity 0.5s, background-color 0.3s, transform 0.18s ease;
+  
+}
+.button-container button:active{
+  opacity: 0.7;
+}
+
+.button-container .reset-btn {
+  width:235px;
+  height: 50px;
+  font-size: 24px;
+  font-weight:bold;
+  border-radius: 5px;
+  background-color: #b90101;
+  color: #ededed;
+}
+
+.button-container .autoplay-button{
+  width: 235px;
+  height: 50px;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: #6b11c0;
+  color: #ededed;
+}
+
+.Scoreboard{
+  width: 90%;
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  gap: 10px;
+  
+}
+.Scoreboard p{
+  margin: 0;
+  width: 100%;
+  border: 1px solid lightgray;
+  padding: 18px;
+  border-radius: 6px;
+}
+.playing-buttons{
+  display: flex;
+  gap: 15px;
+}
+.playing-buttons img{
+  height:50px;
+}
+
+.game-layout{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
