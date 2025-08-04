@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TO-DO LIST</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    .todo-list-container{
+      display: grid;
+      grid-template-rows: auto auto 1fr;
+      justify-content: center;
+    }
+    .delete-button{
+      background-color: #ff4f4f;
+      height: 50px;
+      width: 100px;
+      border: 1px solid darkgrey;
+      border-radius: 8px;
+      color: white;
+    }
+    .todo-list-display{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+    .todo-list-display p{
+      font-size: 20px;
+      font-weight: 600;
+    }
+    .display-container{
+
+    }
+    .task-row {
+      display: grid;
+      align-items: center;
+      grid-template-columns: 200px 150px 100px;
+      background-color: white;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+    .js-date-input{
+      width: auto;
+    }
+    
+    .inputs-and-buttons{
+      display: grid;
+      grid-template-columns: 200px 150px 100px;
+      margin-bottom: 20px;
+    }
+    .add-button{
+      width: 100px;
+    }
+    .task-div{
+      padding-left: 12px;
+    }
+    .dueDate-div{
+      padding-left: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="todo-list-container">
+      <div>
+        <h1>MY TO-DO LIST</h1>
+      </div>
+      <div class="inputs-and-buttons">
+        <input class="js-task-input" placeholder="Enter The Task" onkeydown="
+        if (event.key === 'Enter'){
+          addtask();
+        }
+          
+        ">
+        <input class="js-date-input" type="date" >
+        <div>
+          <button class="add-button" onclick="addtask();">Add</button>
+        </div>
+      </div>
+  
+      <div class="todo-list-display">
+        
+      </div>
+  </div>
+ 
+  <!--js-script-->
+  <script>
+    let todoList = [{
+      value: `Hi I'm poppy`,
+      dueDate: '2022-12-01'
+      
+    }];
+    todoListRenderer();
+    
+    function addtask(){
+      const inputElement = document.querySelector('.js-task-input');
+      let value = inputElement.value;
+      const dateSelector = document.querySelector('.js-date-input');
+      let dueDate = dateSelector.value;
+      todoList.push({
+        value,
+        dueDate
+      });
+      inputElement.value= '';
+      todoListRenderer();
+    }
+    
+    function todoListRenderer(){
+      const display = document.querySelector('.todo-list-display');
+      let displayHTML = '';
+      for(let i=0; i<todoList.length; i++){
+        const html = 
+        `<div class="task-row"><div class="task-div">${todoList[i].value}</div> <div class="dueDate-div">${todoList[i].dueDate}</div><button onclick="
+        todoList.splice(${i},1);
+        todoListRenderer();
+        " class="delete-button">Delete</button> </div>`;
+        displayHTML += html;
+      }
+      display.innerHTML = displayHTML;
+    }
+    
+  </script>
+  <!--js-script-end-->
+</body>
+</html>
