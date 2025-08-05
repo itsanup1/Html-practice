@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Form - Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Your existing styles */
+        body {
+            font-family: Roboto, Arial;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+
+        .contact-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 40px;
+            background-color: white;
+            border-radius: 8px;
+            border: 1px solid black;
+            box-shadow: 0px 2px 5px rgba(0,0,0,0.4);
+        }
+
+        .contact-title {
+            font-size: 50px;
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            color: #10a3ff;
+            text-shadow: 2px 2px 1px rgba(0,0,0,0.2);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-subtitle {
+            font-family: 'Lato', sans-serif;
+            color: #333;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-label {
+            display: block;
+            font-family: 'Lato', sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 15px 20px;
+            font-size: 16px;
+            font-family: 'Lato', Arial;
+            border: 1.3px solid black;
+            border-radius: 8px;
+            transition: all 0.2s;
+            box-sizing: border-box;
+            background-color: white;
+        }
+
+        .form-input:focus {
+            outline: none;
+            box-shadow: 3.5px 5px 5px rgba(16,163,255,0.6);
+              transform: translate(-3px, -2px);
+          }
+  
+          .form-textarea {
+              min-height: 120px;
+              resize: vertical;
+              font-family: 'Lato', Arial;
+          }
+  
+          .form-row {
+              display: flex;
+              gap: 20px;
+          }
+  
+          .form-col {
+              flex: 1;
+          }
+  
+          .submit-button {
+              background-color: #10a3ff;
+              color: white;
+              border: 1.3px solid #10a3ff;
+              padding: 15px 40px;
+              font-size: 18px;
+              font-family: 'Lato', sans-serif;
+              font-weight: 600;
+              border-radius: 8px;
+              cursor: pointer;
+              transition: all 0.2s;
+              display: block;
+              margin: 30px auto 0;
+          }
+  
+          .submit-button:hover {
+              background-color: #0d8ce6;
+              transform: translate(-3px, -2px);
+              box-shadow: 4px 4px 8px rgba(16,163,255,0.4);
+          }
+  
+          .submit-button:active {
+              transform: translate(-2px, -1px);
+              box-shadow: 2px 2px 4px rgba(16,163,255,0.3);
+          }
+  
+          .submit-button:disabled {
+              background-color: #ccc;
+              border-color: #ccc;
+              cursor: not-allowed;
+              transform: none;
+              box-shadow: none;
+          }
+  
+          .error-message {
+              color: #e74c3c;
+              font-size: 14px;
+              margin-top: 5px;
+              font-family: 'Lato', sans-serif;
+          }
+  
+          .success-message {
+              background-color: #d4edda;
+              color: #155724;
+              border: 1px solid #c3e6cb;
+              border-radius: 8px;
+              padding: 15px;
+              margin-bottom: 20px;
+              text-align: center;
+              font-family: 'Lato', sans-serif;
+          }
+  
+          .contact-info {
+              margin-top: 40px;
+              padding-top: 30px;
+              border-top: 1px solid #eee;
+              text-align: center;
+          }
+  
+          .contact-info h3 {
+              font-family: 'Lato', sans-serif;
+              color: #10a3ff;
+              font-size: 24px;
+              margin-bottom: 15px;
+          }
+  
+          .contact-details {
+              display: flex;
+              justify-content: center;
+              gap: 40px;
+              flex-wrap: wrap;
+          }
+  
+          .contact-item {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              font-family: 'Lato', sans-serif;
+              color: #333;
+          }
+  
+          .contact-icon {
+              width: 20px;
+              height: 20px;
+              fill: #10a3ff;
+          }
+  
+          /* Responsive Design */
+          @media (max-width: 700px) {
+              .contact-container {
+                  margin: 20px;
+                  padding: 20px;
+              }
+  
+              .contact-title {
+                  font-size: 35px;
+              }
+  
+              .form-row {
+                  flex-direction: column;
+                  gap: 0;
+              }
+  
+              .contact-details {
+                  flex-direction: column;
+                  gap: 15px;
+              }
+  
+              .submit-button {
+                  width: 100%;
+                  padding: 15px;
+              }
+          }
+  
+          /* Loading animation */
+          .loading {
+              display: inline-block;
+              width: 20px;
+              height: 20px;
+              border: 3px solid #ffffff;
+              border-radius: 50%;
+              border-top-color: transparent;
+              animation: spin 1s ease-in-out infinite;
+              margin-right: 10px;
+          }
+  
+          @keyframes spin {
+              to { transform: rotate(360deg); }
+          }
+      </style>
+  </head>
+  <body>
+      <div class="contact-container">
+          <h1 class="contact-title">Get In Touch</h1>
+          <p class="contact-subtitle">
+              Have a question, want to collaborate, or just say hello? I'd love to hear from you! 
+              Fill out the form below and I'll get back to you as soon as possible.
+          </p>
+  
+          <div id="successMessage" class="success-message" style="display: none;">
+              Thank you for your message! I'll get back to you soon.
+          </div>
+  
+          <form id="contactForm">
+              <div class="form-row">
+                  <div class="form-col">
+                      <div class="form-group">
+                          <label for="firstName" class="form-label">First Name *</label>
+                          <input type="text" id="firstName" name="firstName" class="form-input" required>
+                          <div class="error-message" id="firstNameError"></div>
+                      </div>
+                  </div>
+                  <div class="form-col">
+                      <div class="form-group">
+                          <label for="lastName" class="form-label">Last Name *</label>
+                          <input type="text" id="lastName" name="lastName" class="form-input" required>
+                          <div class="error-message" id="lastNameError"></div>
+                      </div>
+                  </div>
+              </div>
+  
+              <div class="form-group">
+                  <label for="email" class="form-label">Email Address *</label>
+                  <input type="email" id="email" name="email" class="form-input" required>
+                  <div class="error-message" id="emailError"></div>
+              </div>
+  
+              <div class="form-group">
+                  <label for="subject" class="form-label">Subject *</label>
+                  <input type="text" id="subject" name="subject" class="form-input" required>
+                  <div class="error-message" id="subjectError"></div>
+              </div>
+  
+              <div class="form-group">
+                  <label for="message" class="form-label">Message *</label>
+                  <textarea id="message" name="message" class="form-input form-textarea" rows="6" required 
+                            placeholder="Tell me about your project, ask a question, or just say hello..."></textarea>
+                  <div class="error-message" id="messageError"></div>
+              </div>
+  
+              <button type="submit" class="submit-button" id="submitBtn">
+                  Send Message
+              </button>
+          </form>
+  
+          <div class="contact-info">
+              <h3>Other Ways to Reach Me</h3>
+              <div class="contact-details">
+                  <div class="contact-item">
+                      <svg class="contact-icon" viewBox="0 0 24 24">
+                          <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                      </svg>
+                      <span>your.email@example.com</span>
+                  </div>
+                  <div class="contact-item">
+                      <svg class="contact-icon" viewBox="0 0 24 24">
+                          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                      </svg>
+                      <span>Your City, Country</span>
+                  </div>
+              </div>
+          </div>
+      </div>
+  
+      <script>
+          const form = document.getElementById('contactForm');
+          const submitBtn = document.getElementById('submitBtn');
+          const successMessage = document.getElementById('successMessage');
+  
+          // Form validation
+          function validateField(fieldId, errorId, validator, errorMessage) {
+              const field = document.getElementById(fieldId);
+              const errorDiv = document.getElementById(errorId);
+              
+              if (!validator(field.value.trim())) {
+                  errorDiv.textContent = errorMessage;
+                  field.style.borderColor = '#e74c3c';
+                  return false;
+              } else {
+                  errorDiv.textContent = '';
+                  field.style.borderColor = 'black';
+                  return true;
+              }
+          }
+  
+          function validateEmail(email) {
+              const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+              return emailRegex.test(email);
+          }
+  
+          function validateForm() {
+              let isValid = true;
+  
+              isValid &= validateField('firstName', 'firstNameError', 
+                  value => value.length >= 2, 
+                  'First name must be at least 2 characters long');
+  
+              isValid &= validateField('lastName', 'lastNameError', 
+                  value => value.length >= 2, 
+                  'Last name must be at least 2 characters long');
+  
+              isValid &= validateField('email', 'emailError', 
+                  validateEmail, 
+                  'Please enter a valid email address');
+  
+              isValid &= validateField('subject', 'subjectError', 
+                  value => value.length >= 5, 
+                  'Subject must be at least 5 characters long');
+  
+              isValid &= validateField('message', 'messageError', 
+                  value => value.length >= 10, 
+                  'Message must be at least 10 characters long');
+  
+              return isValid;
+          }
+  
+          // Real-time validation
+          ['firstName', 'lastName', 'email', 'subject', 'message'].forEach(fieldId => {
+              document.getElementById(fieldId).addEventListener('blur', () => {
+                  validateForm();
+              });
+          });
+  
+          // Form submission
+          form.addEventListener('submit', async (e) => {
+              e.preventDefault();
+  
+              if (!validateForm()) {
+                  return;
+              }
+  
+              // Show loading state
+              submitBtn.disabled = true;
+              submitBtn.innerHTML = '<span class="loading"></span>Sending...';
+  
+              // Simulate form submission (replace with actual API call)
+              try {
+                  await new Promise(resolve => setTimeout(resolve, 2000));
+                  
+                  // Show success message
+                  successMessage.style.display = 'block';
+                  form.reset();
+                  
+                  // Scroll to success message
+                  successMessage.scrollIntoView({ behavior: 'smooth' });
+  
+                  // Hide success message after 5 seconds
+                  setTimeout(() => {
+                      successMessage.style.display = 'none';
+                  }, 5000);
+  
+              } catch (error) {
+                  alert('Sorry, there was an error sending your message. Please try again.');
+              } finally {
+                  // Reset button
+                  submitBtn.disabled = false;
+                  submitBtn.innerHTML = 'Send Message';
+              }
+          });
+  
+          // Clear error messages when user starts typing
+          form.addEventListener('input', (e) => {
+              if (e.target.classList.contains('form-input')) {
+                  const errorId = e.target.id + 'Error';
+                  const errorDiv = document.getElementById(errorId);
+                  if (errorDiv && errorDiv.textContent) {
+                      errorDiv.textContent = '';
+                      e.target.style.borderColor = 'black';
+                  }
+              }
+          });
+      </script>
+  </body>
+</html>
