@@ -76,7 +76,7 @@
         </div>
         <div>Projects</div>
       </div>
-      <div class="sidebar-box">
+      <div id="contact-me" class="sidebar-box">
         <div class="icon-container">
           <img src="icons/contact.svg">
         </div>
@@ -108,6 +108,10 @@
     </div>
     
     <script>
+      const contactMeButton = document.getElementById('contact-me');
+      contactMeButton.addEventListener('click',() => {
+        window.location.href='Contact-me.html';
+      });
       document.addEventListener("DOMContentLoaded", () => {
         const menuToggle = document.getElementById("menu-toggle");
         const sidebar = document.querySelector(".sidebar");

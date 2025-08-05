@@ -51,3 +51,44 @@
       margin-top:64px;
     }
   }
+
+    .contact-container {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .contact-title {
+        font-size: 35px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .contact-details {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .submit-button {
+        width: 100%;
+        padding: 15px;
+    }
+
+
+
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 1s ease-in-out infinite;
+    margin-right: 10px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
