@@ -15,8 +15,8 @@
           </div>
           <div class="video-details">
             <p class="video-title">${video.title}</p>
-            <p class="channel-name">${video.channelName}</p>
-            <p class="video-stats">${video.states}</p>
+            <div class="channel-name">${video.channelName} </div>
+            <div class="video-stats">${video.states}</div>
           </div>
         </div>
       </div>

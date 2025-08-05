@@ -82,6 +82,27 @@ export const videos = [{
     channelName:"",
     channelLogo:"Channel-Logo/channel-4.jpeg",
     thumbnail:"Thumbnails/Thumbnail-9.jpg"
+  },{
+    title:"Can Humans Ever Leave the Milkey Way",
+    states:"10M views · 3 months ago",
+    duration:"21:43",
+    channelName:"Dhruv Rathee",
+    channelLogo:"Channel-Logo/channel-13.jpg",
+    thumbnail:"Thumbnails/Thumbnail-13.jpg"
+  },{
+    title:"Tarak Mehta ka Oolta Chashma| Episode 474.",
+    states:"14M views · 4 years ago",
+    duration:"19:59",
+    channelName:"Sony Pal",
+    channelLogo:"Channel-Logo/channel-14.jpg",
+    thumbnail:"Thumbnails/Thumbnail-14.jpg"
+  },{
+    title:"Imposible Things Stolen by Indian Thieves",
+    states:"14M views · 1 year ago",
+    duration:"12:28",
+    channelName:"Slayy Point",
+    channelLogo:"Channel-Logo/channel-15.jpg",
+    thumbnail:"Thumbnails/Thumbnail-15.jpg"
   }
 ];
   
