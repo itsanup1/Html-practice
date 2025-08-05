@@ -1,3 +1,4 @@
+  import {videos} from './content.js';
   videos.forEach((video) => {
     const html = `
       <div class="video-preview">
@@ -13,7 +14,7 @@
             <img class="channel-logo" src="${video.channelLogo}">
           </div>
           <div class="video-details">
-            <p class="video-title">${video.title}</p></p>
+            <p class="video-title">${video.title}</p>
             <p class="channel-name">${video.channelName}</p>
             <p class="video-stats">${video.states}</p>
           </div>

@@ -1,4 +1,4 @@
-const videos = [{
+export const videos = [{
     title:"Naruto recap all complete edition",
     states:"2.7M views · 1 month ago",
     duration:"09:11",
