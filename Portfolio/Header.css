@@ -93,7 +93,7 @@
    border-bottom-right-radius: 30px;
    border-top-left-radius: 30px;
    border-top-right-radius: 30px;
-   transition: all  0.2s;
+   transition: all  0.2s ease-in-out 0s;
    outline: none;
  }
  
@@ -150,7 +150,6 @@
    color: transparent;
    background: linear-gradient(to right, #348aff,#0063ec,#0048ab);
    background-clip: text;
-   
  }
  .right-section .quick-access:hover{
    border: 0.5px solid black;
@@ -161,7 +160,7 @@
  .right-section .quick-access:hover div {
     transform: scale(1.1);
     filter: brightness(1.3);
-    transition: all 0.2s ease;
+    transition: all 0.2s ease-in-out 0s;
   }
   .right-section .quick-access:active{
    transform: scale(1);
@@ -185,4 +184,4 @@
  .small-search{
     -webkit-tap-highlight-color: transparent;
   }
- 
+

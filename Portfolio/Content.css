@@ -20,6 +20,9 @@
     display: block;
   }
   .intro-section {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
      max-width: 1200px;
      margin: 40px auto;
      padding: 36px;
@@ -39,6 +42,31 @@
     transition: all 0.25s ease;
     font-weight: 600;
     font-size: 36px;
+    position: relative;
+    width: fit-content;
+    animation: fadeIn 2s ease 0s 1 normal;
+  }
+  .intro-section h1::after{
+    content: '';
+    background: linear-gradient(
+      90deg,
+      #5fa3ff,
+      #1a7aff,
+      #0049ad,
+      #1a7aff,
+      #5fa3ff
+    );
+    background-size: 300% 100%;
+    left: 0;
+    bottom: -16px;
+    height: 8px;
+    width: 0px;
+    position: absolute;
+    transition: all 0.3s ease;
+    animation: gradientAnime 3s linear 0s infinite alternate;
+  }
+  .intro-section h1:hover::after{
+    width: 100%;
   }
   .intro-section p:hover{
     transform: scale(1.08);
@@ -47,3 +75,37 @@
     transform: scale(1.1);
     
   }
+
+@keyframes gradientAnime{
+  0%{background-position:0% 50%;}
+  
+  100%{background-position:100% 50%;}
+}
+@keyframes fadeInLeft{
+  0%{
+    transform: translateX(-90px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeInRight{
+  0%{
+    transform: translateX(90px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
