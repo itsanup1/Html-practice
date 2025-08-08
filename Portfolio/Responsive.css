@@ -3,14 +3,11 @@
       height: 60px;
     }
     .sidebar{
-      padding: 10px 10px;
-      left: -120%;
       top: 74px;
       gap: 16px;
     }
-    .menu-icon{
-      display: flex;
-      margin-left: 14px;
+    .sidebar.active{
+      left: 10px;
     }
     .middle-section{
       display: none;

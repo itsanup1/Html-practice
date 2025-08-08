@@ -6,6 +6,8 @@
    min-width: 70px;
    width: auto;
    padding: 20px 15px;
+   padding: 10px 10px;
+   left: -100%;
    top: 104px;
    bottom: 10px;
    border-radius: 8px;
@@ -16,7 +18,7 @@
    overflow-y: auto;
   }
   .sidebar.active{
-    left: 5px;
+    left: 10px;
   }
  .sidebar-box{
    display: flex;
