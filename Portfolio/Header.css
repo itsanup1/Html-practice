@@ -43,7 +43,7 @@
  .menu-icon:hover{
    border: 1px solid rgba(0,0,0,0.4);
    transform: scale(1.08);
-   box-shadow: 3px 3px 4px rgba(16,163,255,0.5);
+   box-shadow: 3px 3px 5px rgba(16,163,255,0.6);
  }
  .menu-icon:active{
    transform: scale(1);
@@ -152,7 +152,7 @@
  }
  .right-section .quick-access:hover{
    border: 1px solid #0a0a0a;
-   box-shadow: 4px 4px 4px rgba(16,163,255,0.5);
+   box-shadow: 3px 3px 5px rgba(16,163,255,0.6);
    transform: scale(1.08);
  }
  .right-section .quick-access:hover div {
