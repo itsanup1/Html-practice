@@ -1,7 +1,7 @@
  :root{
    --primary-color:#ffffff;
    --secondary-color:#121212;
-   --tertiary-color:#ececec;
+   --tertiary-color:#f3f3f3;
    --box-shadow-main: #00000066;
    --box-shadow-hover: #10a3ff99;
  }
@@ -20,11 +20,7 @@
  body{
    background: var(--tertiary-color);
    font-family: Roboto,Arial;
-<<<<<<< HEAD
-   margin: 104px 20px 0 20px;
-=======
    margin: 104px 20x 0 20px;
->>>>>>> 7ea766a (Minor Fixes and debugging)
  }
  div{
    margin: 0;
