@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <link rel="preload" as="image" href="logo.png">
     <link rel="icon" href="icons/logo2.png">
     <link href="Header.css" rel="stylesheet">
     <link href="General.css" rel="stylesheet">
@@ -80,31 +82,42 @@
     <nav class="sidebar">
       <div class="sidebar-box">
         <div class="icon-container">
-          <img src="icons/home.svg">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path fill="var(--ci-primary-color, currentColor)" d="M469.666,216.45,271.078,33.749a34,34,0,0,0-47.062.98L41.373,217.373,32,226.745V496H208V328h96V496H480V225.958ZM248.038,56.771c.282,0,.108.061-.013.18C247.9,56.832,247.756,56.771,248.038,56.771ZM448,464H336V328a32,32,0,0,0-32-32H208a32,32,0,0,0-32,32V464H64V240L248.038,57.356c.013-.012.014-.023.024-.035L448,240Z" class="ci-primary"/>
+          </svg>
+
         </div>
         <div>Home</div>
       </div>
       <div class="sidebar-box">
         <div class="icon-container">
-          <img src="icons/about-me.svg">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path fill="var(--ci-primary-color, currentColor)" d="M411.6,343.656l-72.823-47.334,27.455-50.334A80.23,80.23,0,0,0,376,207.681V128a112,112,0,0,0-224,0v79.681a80.236,80.236,0,0,0,9.768,38.308l27.455,50.333L116.4,343.656A79.725,79.725,0,0,0,80,410.732V496H448V410.732A79.727,79.727,0,0,0,411.6,343.656ZM416,464H112V410.732a47.836,47.836,0,0,1,21.841-40.246l97.66-63.479-41.64-76.341A48.146,48.146,0,0,1,184,207.681V128a80,80,0,0,1,160,0v79.681a48.146,48.146,0,0,1-5.861,22.985L296.5,307.007l97.662,63.479h0A47.836,47.836,0,0,1,416,410.732Z" class="ci-primary"/>
+          </svg>
         </div>
         <div>About me</div>
       </div>
       <div class="sidebar-box">
         <div class="icon-container">
-          <img src="icons/folder.svg">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path fill="var(--ci-primary-color, currentColor)" d="M488.671,221.645a23.848,23.848,0,0,0-18.917-9.231h-66.2V160a23.138,23.138,0,0,0-23.112-23.111h-136.3L226.37,94.22A23.051,23.051,0,0,0,205.037,80H39.111A23.138,23.138,0,0,0,16,103.111V467.556H436.707l56.33-225.321A23.849,23.849,0,0,0,488.671,221.645ZM48,435.556V112H199.111l23.7,56.889H371.556v43.525H137.587A23.965,23.965,0,0,0,114.3,230.593L63.063,435.556Zm363.723,0H96.048l47.785-191.142H459.508Z" class="ci-primary"/>
+          </svg>
         </div>
         <div>Projects</div>
       </div>
       <div id="contact-me" class="sidebar-box">
         <div class="icon-container">
-          <img src="icons/contact.svg">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path fill="var(--ci-primary-color, currentColor)" d="M472,48H40A24.028,24.028,0,0,0,16,72V440a24.028,24.028,0,0,0,24,24h88V405.178A20.01,20.01,0,0,1,138.284,387.7l91.979-51.123L200,260.919V200a56,56,0,0,1,112,0v60.919l-30.263,75.655L373.716,387.7h0A20.011,20.011,0,0,1,384,405.178V464h88a24.028,24.028,0,0,0,24-24V72A24.028,24.028,0,0,0,472,48Zm-8,384H416V405.178a52.027,52.027,0,0,0-26.738-45.451h0L321.915,322.3,344,267.081V200a88,88,0,0,0-176,0v67.081L190.085,322.3l-67.347,37.432A52.027,52.027,0,0,0,96,405.178V432H48V80H464Z" class="ci-primary"/>
+          </svg>
         </div>
         <div>Contact me</div>
       </div>
       <div class="sidebar-box">
         <div class="icon-container">
-          <img src="icons/social.svg">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path fill="var(--ci-primary-color, currentColor)" d="M256,16C123.452,16,16,123.452,16,256S123.452,496,256,496,496,388.548,496,256,388.548,16,256,16ZM175.047,447.667A208.26,208.26,0,0,1,64.333,175.047c1.018-2.408,2.092-4.785,3.2-7.145L120,215.126v63.235L197.1,360H236v49.047l-47.052,43.915Q181.926,450.568,175.047,447.667Zm228.031-44.589A207.253,207.253,0,0,1,256,464a210.4,210.4,0,0,1-29.722-2.107L268,422.953V328H210.9L152,265.639V200.874L83.7,139.408a209.259,209.259,0,0,1,91.343-75.075A207.793,207.793,0,0,1,371.3,82.839l-45.564,58.582,15.49,38.725-10.485,10.485-78.618-15.723L208,208v88H384l50.345,67.126A208.127,208.127,0,0,1,403.078,403.078ZM464,256a206.763,206.763,0,0,1-13.873,74.837L400,264H240V224l19.877-14.908,81.382,16.277,37.515-37.515-16.51-41.275,34.2-43.977q3.361,3.084,6.61,6.32A207.253,207.253,0,0,1,464,256Z" class="ci-primary"/>
+          </svg>
         </div>
         <div>Socials</div>
       </div>

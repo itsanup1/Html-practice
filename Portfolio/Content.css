@@ -11,7 +11,7 @@
     min-height: 100vh;
   }
   .title{
-    font-size: 50px;
+    font-size: 3.125rem;
   }
   
   .intro-section {
@@ -31,12 +31,12 @@
   .intro-section p{
     transition: all 0.25s ease;
     line-height: 2;
-    font-size: 20px;
+    font-size: 1.25rem;
   }
   .intro-section h1{
     transition: all 0.25s ease;
     font-weight: 600;
-    font-size: 36px;
+    font-size: 2.25rem;
     position: relative;
     width: fit-content;
     animation: fadeIn 2s ease 0s 1 normal;

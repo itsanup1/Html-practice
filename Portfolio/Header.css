@@ -12,6 +12,7 @@
    box-shadow: 0 0 5px var(--box-shadow-main);
    gap: 10px;
    z-index: 1000;
+   transition: background-color 0.15s;
  }
  .header-back{
    z-index: 999;
@@ -20,8 +21,9 @@
    right: 0;
    left: 0;
    height: 84px;
-   background-color: var(--primary-color);
+   background-color: var(--tertiary-color);
    opacity: 0.75;
+   transition: background-color 0.15s;
  }
  .left-section{
    display: flex;
@@ -169,8 +171,8 @@
  }
  .small-search{
    display:none;
-   height:36px;
-   width:36px;
+   height:32px;
+   width:32px;
    justify-content: center;
    align-items: center;
    background-color: var(--tertiary-color);
@@ -179,6 +181,7 @@
    cursor: pointer;
    transition: all 0.2s;
    padding:4px ;
+   opacity: 0.5;
  }
  
  .small-search{
