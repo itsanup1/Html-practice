@@ -21,6 +21,7 @@
     left: 10px;
   }
  .sidebar-box{
+   color: var(--secondary-color);
    height: fit-content;
    max-height: 100px;
    display: flex;
