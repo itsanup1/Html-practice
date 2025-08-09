@@ -9,7 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     
-    <link rel="preload" as="image" href="logo.png">
+    <link rel="preload" as="image" href="icons/logo.png">
+    <link rel="preload" as="image" href="icons/dark-mode.svg">
+    <link rel="preload" as="image" href="icons/light-mode.svg">
     <link rel="icon" href="icons/logo2.png">
     <link href="Header.css" rel="stylesheet">
     <link href="General.css" rel="stylesheet">
@@ -165,6 +167,7 @@
           overlay.classList.toggle("active");
         }
         
+        switchTheme();
         menuToggle.addEventListener("click", toggleSidebar);
         overlay.addEventListener("click", () => {
           sidebar.classList.remove("active");
