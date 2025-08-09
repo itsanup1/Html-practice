@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     
     <link href="Header.css" rel="stylesheet">
+    <link href="General.css" rel="stylesheet">
     <link href="Sidebar.css" rel="stylesheet">
     <link href="Content.css" rel="stylesheet">
     <link href="Responsive.css" rel="stylesheet">
@@ -19,8 +20,16 @@
     <!--   Header   -->
     <header class="header">
       <div class="left-section">
-        <div class="menu-icon">
-          <img id="menu-toggle" src="icons/hamburger-menu.svg">
+        <div id="menu-toggle" class="menu-icon">
+          <svg class="menu-svg" xmlns="http://www.w3.org/2000/svg" 
+               viewBox="0 0 24 24" 
+               preserveAspectRatio="xMidYMid meet" 
+               focusable="false" 
+               style="width: 100%; height: 100%; pointer-events: none; display: block;">
+            <g fill="currentColor">
+              <path d="M21,6H3V5h18V6z M21,11H3v1h18V11z M21,17H3v1h18V17z"></path>
+            </g>
+          </svg>
         </div>
         <div class="site-logo">
           <div class="logo">
@@ -31,7 +40,12 @@
       <div class="middle-section">
         <div class="search-bar-container">
           <input class="search-bar" placeholder="Search">
-          <button class="search-button"><img src="icons/search-icon.svg"></button>
+          <button class="search-button">
+            <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="currentColor">
+              <circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="2" fill="none"/>
+              <line x1="15.5" y1="15.5" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
         </div>
         
       </div>
@@ -46,7 +60,13 @@
           Instagram
         </div>
         <div class="small-search">
-          <img src="icons/search-icon.svg">
+          <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="currentColor">
+            <circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="2" fill="none"/>
+            <line x1="15.5" y1="15.5" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="theme-switcher" id="darkmode-toggle">
+          <img src="icons/dark-mode.svg">
         </div>
       </div>
       
@@ -138,6 +158,42 @@
           overlay.classList.remove("active");
         });
       });
+      const root= document.documentElement;
+      let themeMode = 'light';
+      const darkButton = document.getElementById('darkmode-toggle');
+      darkButton.addEventListener('click',()=>{
+        if(themeMode ==='light'){
+          themeMode = 'dark';
+        }else{
+          themeMode = 'light'
+        }
+        switchTheme();
+      });
+      
+      
+      const themeSwitcher=document.getElementById('darkmode-toggle');
+      
+      function switchTheme(){
+        if (themeMode=== 'light'){
+          root.style.setProperty('--primary-color','#efefef');
+          root.style.setProperty('--secondary-color', '#121212');
+          root.style.setProperty('--tertiary-color','#e9e9e9');
+          root.style.setProperty('--box-shadow-main', '#00000066');
+          root.style.setProperty('--box-shadow-hover', '#10a3ff99');
+          themeSwitcher.innerHTML=`
+            <img src="icons/dark-mode.svg">
+          `;
+        }else if(themeMode=== 'dark'){
+          root.style.setProperty('--primary-color','#121212');
+          root.style.setProperty('--secondary-color', '#efefef');
+          root.style.setProperty('--tertiary-color','#292929');
+          root.style.setProperty('--box-shadow-main', '#f3f3f36c');
+          root.style.setProperty('--box-shadow-hover', '#10a3ff99');
+          themeSwitcher.innerHTML = `
+            <img src="icons/light-mode.svg">
+          `;
+        }
+      }
     </script>
   </body>
 </html>

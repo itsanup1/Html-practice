@@ -6,7 +6,6 @@
     flex-wrap: wrap;
     height: auto;
     width: auto;
-    background-color: #fcfcfc;
     overflow-x: hidden;
     overflow-y: auto;
     min-height: 100vh;
@@ -28,10 +27,10 @@
      padding: 36px;
      text-align: center;
      font-family: 'Lato', sans-serif;
-     color: #333;
-     background-color: white;
+     color: var(--secondary-color);
+     background-color: var(--primary-color);
      border-radius: 8px;
-     box-shadow: 0 0 5px rgba(0,0,0,0.4);
+     box-shadow: 0 0 5px var(--box-shadow-main);
   }
   .intro-section p{
     transition: all 0.25s ease;

@@ -1,8 +1,24 @@
+ :root{
+   --primary-color:#efefef;
+   --secondary-color:#121212;
+   --tertiary-color:#e9e9e9;
+   --box-shadow-main: #00000066;
+   --box-shadow-hover: #10a3ff99;
+ }
+ /*:root{
+   --primary-color:#121212;
+   --secondary-color:#efefef;
+   --tertiary-color:#292929;
+   --box-shadow-main: #f3f3f36c;
+   --box-shadow-hover: #10a3ff99;
+ }*/
+ 
  html{
    margin: 0;
    padding: 0;
  }
  body{
+   background: var(--tertiary-color);
    font-family: Roboto,Arial;
    margin: 104px 0 0 20px;
  }

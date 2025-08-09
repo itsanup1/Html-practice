@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48">
+  <defs>
+    <!-- Strong gradient like light mode -->
+    <linearGradient id="moonGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10a3ff" />       <!-- same bright start as sun -->
+      <stop offset="100%" stop-color="#10a3ff33" />   <!-- very transparent blue -->
+    </linearGradient>
+  </defs>
+
+  <!-- crescent moon -->
+  <path fill="url(#moonGrad)" d="
+    M15.5 2.5
+    A9.5 9.5 0 1 0 21.5 17
+    A7 7 0 1 1 15.5 2.5
+    Z"/>
+</svg>

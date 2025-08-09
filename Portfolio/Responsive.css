@@ -9,13 +9,10 @@
     .sidebar.active{
       left: 10px;
     }
-    .middle-section{
-      display: none;
-    }
     .left-section{
       gap: 20px;
     }
-    .right-section .quick-access{
+    .right-section .quick-access, .middle-section{
       display: none;
     }
     .left-section img, .left-section div {
@@ -26,7 +23,7 @@
       align-items: center;
     }
     .right-section{
-      justify-content: right;
+      justify-content: flex-end;
     }
     .small-search{
       display: flex;
@@ -46,6 +43,11 @@
     .content{
       margin: 0;
       margin-top:64px;
+    }
+    .theme-switcher img{
+      height: 40px;
+      margin-right:8px;
+      margin-left:8px;
     }
   }
 
