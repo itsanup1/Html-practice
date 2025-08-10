@@ -18,6 +18,7 @@
     <link href="Sidebar.css" rel="stylesheet">
     <link href="Content.css" rel="stylesheet">
     <link href="Responsive.css" rel="stylesheet">
+    <link href="label-animation.css" rel="stylesheet">
     
   </head>
   <body>
@@ -57,7 +58,7 @@
         <div id="fetch-github" class="quick-access">
           GitHub
         </div>
-        <div id="fetch-cloudflare" class="quick-access">
+        <div id="fetch-cloudflare" class="quick-access social">
           CloudFlare
         </div>
         <div id="fetch-instagram" class="quick-access">
@@ -167,57 +168,53 @@
           overlay.classList.toggle("active");
         }
         
-        switchTheme();
         menuToggle.addEventListener("click", toggleSidebar);
         overlay.addEventListener("click", () => {
           sidebar.classList.remove("active");
           overlay.classList.remove("active");
         });
       });
-      const root= document.documentElement;
+      
+      const root = document.documentElement;
       let themeMode = '';
-      function getTheme(){
-        let themeMode = localStorage.getItem("mode");
-        return(themeMode);
+      
+      function getTheme() {
+        return localStorage.getItem("mode");
       }
       
-      const darkButton = document.getElementById('darkmode-toggle');
-      darkButton.addEventListener('click',()=>{
-        if (getTheme() === null){
-          themeMode = localStorage.setItem("mode","light");
+      const themeSwitcher = document.getElementById('darkmode-toggle');
+      
+      function switchTheme() {
+        if (getTheme() === 'light') {
+          root.style.setProperty('--primary-color', '#ffffff');
+          root.style.setProperty('--secondary-color', '#121212');
+          root.style.setProperty('--tertiary-color', '#f3f3f3');
+          root.style.setProperty('--box-shadow-main', '#00000066');
+          root.style.setProperty('--box-shadow-hover', '#10a3ff99');
+          themeSwitcher.innerHTML = `<img src="icons/dark-mode.svg">`;
+        } else if (getTheme() === 'dark') {
+          root.style.setProperty('--primary-color', '#121212');
+          root.style.setProperty('--secondary-color', '#efefef');
+          root.style.setProperty('--tertiary-color', '#292929');
+          root.style.setProperty('--box-shadow-main', '#f3f3f36c');
+          root.style.setProperty('--box-shadow-hover', '#10a3ff99');
+          themeSwitcher.innerHTML = `<img src="icons/light-mode.svg">`;
         }
-        else if(getTheme() ==='light'){
-          themeMode = localStorage.setItem("mode","dark");
-        }else{
-          themeMode = localStorage.setItem("mode","light")
+      }
+      
+      switchTheme();
+      
+      const darkButton = document.getElementById('darkmode-toggle');
+      darkButton.addEventListener('click', () => {
+        if (getTheme() === null) {
+          localStorage.setItem("mode", "light");
+        } else if (getTheme() === 'light') {
+          localStorage.setItem("mode", "dark");
+        } else {
+          localStorage.setItem("mode", "light");
         }
         switchTheme();
       });
-      
-      
-      const themeSwitcher=document.getElementById('darkmode-toggle');
-      
-      function switchTheme(){
-        if (getTheme()=== 'light'){
-          root.style.setProperty('--primary-color','#ffffff');
-          root.style.setProperty('--secondary-color', '#121212');
-          root.style.setProperty('--tertiary-color','#f3f3f3');
-          root.style.setProperty('--box-shadow-main', '#00000066');
-          root.style.setProperty('--box-shadow-hover', '#10a3ff99');
-          themeSwitcher.innerHTML=`
-            <img src="icons/dark-mode.svg">
-          `;
-        }else if(getTheme()=== 'dark'){
-          root.style.setProperty('--primary-color','#121212');
-          root.style.setProperty('--secondary-color', '#efefef');
-          root.style.setProperty('--tertiary-color','#292929');
-          root.style.setProperty('--box-shadow-main', '#f3f3f36c');
-          root.style.setProperty('--box-shadow-hover', '#10a3ff99');
-          themeSwitcher.innerHTML = `
-            <img src="icons/light-mode.svg">
-          `;
-        }
-      }
     </script>
   </body>
 </html>
