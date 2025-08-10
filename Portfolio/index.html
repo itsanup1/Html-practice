@@ -175,13 +175,21 @@
         });
       });
       const root= document.documentElement;
-      let themeMode = 'light';
+      let themeMode = '';
+      function getTheme(){
+        let themeMode = localStorage.getItem("mode");
+        return(themeMode);
+      }
+      
       const darkButton = document.getElementById('darkmode-toggle');
       darkButton.addEventListener('click',()=>{
-        if(themeMode ==='light'){
-          themeMode = 'dark';
+        if (getTheme() === null){
+          themeMode = localStorage.setItem("mode","light");
+        }
+        else if(getTheme() ==='light'){
+          themeMode = localStorage.setItem("mode","dark");
         }else{
-          themeMode = 'light'
+          themeMode = localStorage.setItem("mode","light")
         }
         switchTheme();
       });
@@ -190,7 +198,7 @@
       const themeSwitcher=document.getElementById('darkmode-toggle');
       
       function switchTheme(){
-        if (themeMode=== 'light'){
+        if (getTheme()=== 'light'){
           root.style.setProperty('--primary-color','#ffffff');
           root.style.setProperty('--secondary-color', '#121212');
           root.style.setProperty('--tertiary-color','#f3f3f3');
@@ -199,7 +207,7 @@
           themeSwitcher.innerHTML=`
             <img src="icons/dark-mode.svg">
           `;
-        }else if(themeMode=== 'dark'){
+        }else if(getTheme()=== 'dark'){
           root.style.setProperty('--primary-color','#121212');
           root.style.setProperty('--secondary-color', '#efefef');
           root.style.setProperty('--tertiary-color','#292929');
