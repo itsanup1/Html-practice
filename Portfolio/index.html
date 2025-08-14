@@ -13,12 +13,12 @@
     <link rel="preload" as="image" href="icons/dark-mode.svg">
     <link rel="preload" as="image" href="icons/light-mode.svg">
     <link rel="icon" href="icons/logo2.png">
-    <link href="Header.css" rel="stylesheet">
-    <link href="General.css" rel="stylesheet">
-    <link href="Sidebar.css" rel="stylesheet">
-    <link href="Content.css" rel="stylesheet">
-    <link href="Responsive.css" rel="stylesheet">
-    <link href="label-animation.css" rel="stylesheet">
+    
+    <link href="styles/Header.css" rel="stylesheet">
+    <link href="styles/General.css" rel="stylesheet">
+    <link href="styles/Sidebar.css" rel="stylesheet">
+    <link href="styles/Content.css" rel="stylesheet">
+    <link href="styles/Responsive.css" rel="stylesheet">
     
   </head>
   <body>
@@ -131,90 +131,47 @@
     <div class="content">
       <section class="intro-section">
         <h1>Welcome to My Web Page</h1>
-        <p style="animation: fadeInLeft 2s ease 0s 1 normal;">
-          This website is your gateway to explore my personal and professional projects. From front-end experiments and web applications to design showcases and creative builds — everything lives here in one place.  
-        </p>
-        <p style="animation: fadeInRight 2s ease 0s 1 normal;">
-          Whether you're a curious visitor, a fellow developer, or a potential collaborator, feel free to browse through my work, get to know what I'm passionate about, and see how I turn ideas into working products.  
-        </p>
-        <p style="animation: fadeInLeft 2s ease 0s 1 normal;">
-          More updates, projects, and interactive features are always on the way — so stick around and check back often!
-        </p>
+        <div class="paragraphs">
+          <div>
+            This website is your gateway to explore my personal and professional projects. From front-end experiments and web applications to design showcases and creative builds — everything lives here in one place.  
+          </div>
+          <div>
+            Whether you're a curious visitor, a fellow developer, or a potential collaborator, feel free to browse through my work, get to know what I'm passionate about, and see how I turn ideas into working products.  
+          </div>
+          <div>
+            More updates, projects, and interactive features are always on the way — so stick around and check back often!
+          </div>
+
+          <div>
+            This website is your gateway to explore my personal and professional projects. From front-end experiments and web applications to design showcases and creative builds — everything lives here in one place.  
+          </div>
+          <div>
+            Whether you're a curious visitor, a fellow developer, or a potential collaborator, feel free to browse through my work, get to know what I'm passionate about, and see how I turn ideas into working products.  
+          </div>
+          <div>
+            More updates, projects, and interactive features are always on the way — so stick around and check back often!
+          </div>
+
+          <div>
+            This website is your gateway to explore my personal and professional projects. From front-end experiments and web applications to design showcases and creative builds — everything lives here in one place.  
+          </div>
+          <div>
+            Whether you're a curious visitor, a fellow developer, or a potential collaborator, feel free to browse through my work, get to know what I'm passionate about, and see how I turn ideas into working products.  
+          </div>
+          <div>
+            More updates, projects, and interactive features are always on the way — so stick around and check back often!
+          </div>          
+        </div>
       </section>
     </div>
     
-    <script>
-      const accessGithub = document.getElementById('fetch-github');
-      accessGithub.addEventListener('click', () => {
-        window.open('https://github.com/itsanup1','_blank');
-      });
+    <script type="module" src="scripts/portfolio.js">
       
-      const accessInsta = document.getElementById('fetch-instagram');
-      accessInsta.addEventListener('click', () => {
-        window.open('https://www.instagram.com/its_anup_patil?igsh=ZzE2NGMzZHg2dHo=','_blank');
-      });
       
-      const contactMeButton = document.getElementById('contact-me');
-      contactMeButton.addEventListener('click',() => {
-        window.location.href='Contact-me.html';
-      });
-      document.addEventListener("DOMContentLoaded", () => {
-        const menuToggle = document.getElementById("menu-toggle");
-        const sidebar = document.querySelector(".sidebar");
-        const overlay = document.getElementById("overlay");
-    
-        function toggleSidebar() {
-          sidebar.classList.toggle("active");
-          overlay.classList.toggle("active");
-        }
-        
-        menuToggle.addEventListener("click", toggleSidebar);
-        overlay.addEventListener("click", () => {
-          sidebar.classList.remove("active");
-          overlay.classList.remove("active");
-        });
-      });
       
-      const root = document.documentElement;
-      let themeMode = '';
       
-      function getTheme() {
-        return localStorage.getItem("mode");
-      }
       
-      const themeSwitcher = document.getElementById('darkmode-toggle');
       
-      function switchTheme() {
-        if (getTheme() === 'light') {
-          root.style.setProperty('--primary-color', '#ffffff');
-          root.style.setProperty('--secondary-color', '#121212');
-          root.style.setProperty('--tertiary-color', '#f3f3f3');
-          root.style.setProperty('--box-shadow-main', '#00000066');
-          root.style.setProperty('--box-shadow-hover', '#10a3ff99');
-          themeSwitcher.innerHTML = `<img src="icons/dark-mode.svg">`;
-        } else if (getTheme() === 'dark') {
-          root.style.setProperty('--primary-color', '#121212');
-          root.style.setProperty('--secondary-color', '#efefef');
-          root.style.setProperty('--tertiary-color', '#292929');
-          root.style.setProperty('--box-shadow-main', '#f3f3f36c');
-          root.style.setProperty('--box-shadow-hover', '#10a3ff99');
-          themeSwitcher.innerHTML = `<img src="icons/light-mode.svg">`;
-        }
-      }
-      
-      switchTheme();
-      
-      const darkButton = document.getElementById('darkmode-toggle');
-      darkButton.addEventListener('click', () => {
-        if (getTheme() === null) {
-          localStorage.setItem("mode", "light");
-        } else if (getTheme() === 'light') {
-          localStorage.setItem("mode", "dark");
-        } else {
-          localStorage.setItem("mode", "light");
-        }
-        switchTheme();
-      });
     </script>
   </body>
 </html>
