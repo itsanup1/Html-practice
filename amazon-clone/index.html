@@ -3,18 +3,39 @@
   <head>
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/content.css">
+    <link rel="stylesheet" href="styles/general.css">
     <title>Amazon</title>
   </head>
   <body>
     <header class="header">
-      
+      <div class="left-section">
+        <img src="images/icons/amazon-logo-white.png">
+      </div>
+      <div class="middle-section">
+        <div class="search-bar-container">
+          <input class="search-bar" placeholder="Search">
+        </div>
+        <div class="search-button-container">
+          <button class="search-button"><img src="images/icons/search-icon.png"></button>
+        </div>
+      </div>
+      <div class="right-section">
+        <div class="return-n-orders">
+          <p class="returns">Returns</p>
+          <p>& Orders</p>
+        </div>
+        <div class="cart-button">
+          <div class="cart-items">3</div>
+          <img src="images/icons/cart-icon.png">
+          <div class="cart-text">Cart</div>
+        </div>
+      </div>
     </header>
     
     <section class="product-grid">
-      
     </section>
     
-    <script src="scripts/amazon.js">
+    <script type="module" src="scripts/amazon.js">
       
     </script>
   </body>

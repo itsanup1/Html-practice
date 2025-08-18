@@ -1,8 +1,119 @@
+  p{
+    margin: 0;
+  }
   .header{
     position: fixed;
+    display: flex;
     left: 0;
     right: 0;
     top: 0;
     height: 60px;
     background-color: rgb(19,25,33);
   }
+  .left-section{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 200px;
+  }
+  .left-section img{
+    margin-left: 28px;
+    height: 32px;
+  }
+  .middle-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+  }
+  .middle-section .search-bar-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-left: 36px;
+  }
+  .middle-section .search-button-container {
+    width: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-right: 32px;
+  }
+  .search-bar{
+    width: 100%;
+    height: 42px;
+    padding-left: 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 4px;
+  }
+  .search-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 44px;
+    margin: 0;
+    background-color: var(--primary-color);
+    border: none;
+    padding: 0px 32px;
+    border-radius: 4px;
+    margin-left: -6px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .search-button img{
+    object-fit: contain;
+    height: 28px;
+  }
+  .right-section{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 20px;
+    background-color: rgb(19,25,33);
+    width: 100%;
+    max-width: 220px;
+  }
+  .return-n-orders{
+    color: white;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  .return-n-orders .returns{
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 2px;
+  }
+  .cart-button{
+    height: 44px;
+    position: relative;
+    padding: 4px 8px;
+    margin-right: 40px;
+  }
+  .cart-button img{
+    height: 100%;
+  }
+  .cart-text{
+    position: absolute;
+    right: -32%;
+    top: 50%;
+    color: white;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+  .cart-items{
+    position: absolute;
+    top: 0;
+    right: 36%;
+    color: var(--primary-color);
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+

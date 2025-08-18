@@ -1,0 +1,29 @@
+.main{
+  margin-top: 80px;
+}
+
+.page-title{
+  margin-bottom: 20px;
+  font-family: Arial;
+  font-size: 28px;
+}
+
+.checkout-grid{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  
+}
+
+.order-preview{
+  height: 500px;
+  background-color: skyblue;
+  font-family: Arial;
+  font-size: 28px;
+}
+.payment-preview{
+  height: 400px;
+  background-color: lightpink;
+  font-family: Arial;
+  font-size: 28px;
+}
