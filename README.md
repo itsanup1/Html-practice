@@ -6,6 +6,8 @@ This Repository is For My Personal Web Development Practice so do not consider i
 
 Access The New Portfolio Project on this url: https://my-projects-3ya.pages.dev/
 
+Access The Amazon clone on this url: https://html-practice-646.pages.dev/amazon-clone
+
 Access The YouTube clone on this url: https://youtube-clone-ujf.pages.dev
 
 Access The Rock-Paper-Scissors Project on this url: https://html-practice-646.pages.dev/Rock-Paper-Scissors
