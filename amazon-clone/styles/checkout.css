@@ -1,5 +1,6 @@
 .main{
   margin-top: 80px;
+  font-family: Arial;
 }
 
 .page-title{
@@ -12,18 +13,85 @@
   width: 100%;
   display: grid;
   grid-template-columns: 1.5fr 1fr;
-  
 }
 
 .order-preview{
-  height: 500px;
-  background-color: skyblue;
   font-family: Arial;
   font-size: 28px;
 }
+
+.order-preview .order-item{
+  display: grid;
+  grid-template-columns: 100px 1fr auto;
+  padding: 24px;
+  margin: 12px 0;
+  border: 1px solid #505050;
+  border-radius: 4px;
+}
+
+.order-details{
+  display: grid;
+  grid-row-gap: 8px;
+  padding-left: 20px;
+  height: fit-content;
+}
+
+.order-details .order-name{
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.order-details .order-price{
+  font-size: 24px;
+  color: #954019;
+  font-weight: bold;
+}
+
+.order-details .order-quantity{
+  font-size: 24px;
+}
+
+.order-image img{
+  object-fit: cover;
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+
+.order-delivery{
+  height: fit-content;
+  padding-left: 32px;
+}
+
+.order-delivery-title{
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.order-delivery-option {
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.order-date{
+  font-weight: bold;
+  color: #029b12;
+  font-size: 24px;
+}
+
+.order-shipping-charge{
+  color: #505050;
+  font-size: 18px;
+  opacity: 0.8;
+  font-weight: 500;
+}
+
 .payment-preview{
   height: 400px;
   background-color: lightpink;
   font-family: Arial;
   font-size: 28px;
+  margin: 12px;
 }
