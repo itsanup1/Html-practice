@@ -89,9 +89,37 @@
 }
 
 .payment-preview{
-  height: 400px;
-  background-color: lightpink;
+  height: fit-content;
   font-family: Arial;
   font-size: 28px;
   margin: 12px;
+  padding: 12px;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.payment-preview .payment-preview-title{
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.payment-preview .item-price, .payment-preview .total-before-tax, .payment-preview .shipping-price, .payment-preview .estimated-tax{
+  font-size: 20px;
+  color: #505050;
+  
+}
+
+.preveiw-element{
+  display: flex;
+  font-size: 20px;
+  color: #505050;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.payment-preview .order-total{
+  color: #954019;
+  font-weight: bold;
+  font-size: 24px;
 }
