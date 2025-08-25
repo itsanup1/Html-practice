@@ -1,4 +1,6 @@
-  import {cartInfo} from "./cart.js";
+  import {cart} from "./cart.js";
+  import {products} from "./product.js";
+  
   
   console.log(cartInfo);
   const orderPreview = document.querySelector('.order-preview');
