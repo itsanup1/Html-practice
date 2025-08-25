@@ -6,6 +6,7 @@
       margin-top: 60px;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      overflow-x: hidden;
     }
     .products{
       border-right: 1px solid lightgray ;
