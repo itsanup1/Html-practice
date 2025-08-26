@@ -29,8 +29,8 @@
             <div class="order-quantity">
               </span>
                 Quantity: <span>${cartItem.quantity}</span>
-                <span class="update-quantity">Update</span>
-                <span class="delete-quantity">Delete</span>
+                <span class="update-quantity js-update-quantity" data-product-id = "${matchingProduct.id}">Update</span>
+                <span class="delete-quantity js-delete-quantity" data-product-id = "${matchingProduct.id}">Delete</span>
               <span>
             </div>
           </div>
@@ -77,6 +77,18 @@
     });
     orderPreview.innerHTML = htmlCode;
   }
+ 
   updateCart();
-  
+
+  orderPreview.addEventListener('click', (event) => {
+    if (event.target.classList.contains('js-delete-quantity')) {
+      const deleteId = event.target.dataset.productId;
+      const toBeDeleted = cart.findIndex(item => item.id === deleteId);
+      
+      if (toBeDeleted !== -1) {
+        cart.splice(toBeDeleted, 1); // Don't assign back to cart!
+        updateCart();
+      }
+    }
+  });
   

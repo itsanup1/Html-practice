@@ -45,9 +45,6 @@
     button.addEventListener('click', () => {
       const productId = button.dataset.productId;
       
-      
-      const quantitySelect = button.parentElement.querySelector('.product-quantity');
-      const selectedQuantity = parseInt(quantitySelect.value);
 
       let matchingItem;
       cart.forEach((item) => {
