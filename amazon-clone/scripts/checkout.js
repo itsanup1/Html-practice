@@ -14,8 +14,7 @@
         }
 
       });
-      
-      const html = `
+      htmlCode += `
         <div class="order-item">
           <div class="order-image">
             <img src= ${matchingProduct.image}>
@@ -28,13 +27,17 @@
               $${(matchingProduct.price/100).toFixed(2)}
             </div>
             <div class="order-quantity">
-              Quantity: ${cartItem.quantity}
+              </span>
+                Quantity: <span>${cartItem.quantity}</span>
+                <span class="update-quantity">Update</span>
+                <span class="delete-quantity">Delete</span>
+              <span>
             </div>
           </div>
           <div class="order-delivery">
             <div class="order-delivery-title">Choose a delivery option :</div>
             <div class="order-delivery-option">
-              <input type="radio" name="order-${matchingProduct.id}">
+              <input class="date-choice-button" type="radio" name="order-${matchingProduct.id}">
               <div>
                 <div class="order-date">
                   Tuesday, August 26
@@ -45,7 +48,7 @@
               </div>
             </div>
             <div class="order-delivery-option">
-              <input type="radio" name="order-${matchingProduct.id}">
+              <input class="date-choice-button" type="radio" name="order-${matchingProduct.id}">
               <div>
                 <div class="order-date">
                   Tuesday, August 20
@@ -56,7 +59,7 @@
               </div>
             </div>
             <div class="order-delivery-option">
-              <input type="radio" name="order-${matchingProduct.id}">
+              <input class="date-choice-button" type="radio" name="order-${matchingProduct.id}">
               <div>
                 <div class="order-date">
                   Tuesday, August 18
@@ -69,7 +72,7 @@
           </div>
         </div>
       `;
-      htmlCode += html;
+      
       
     });
     orderPreview.innerHTML = htmlCode;

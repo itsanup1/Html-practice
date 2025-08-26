@@ -51,6 +51,22 @@
   font-size: 24px;
 }
 
+.order-quantity .delete-quantity, .order-quantity .update-quantity{
+  color: rgb(0, 98, 255);
+  margin-left: 8px;
+  font-size: 24px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.order-quantity .delete-quantity:hover , .order-quantity .update-quantity:hover {
+  color: rgb(255, 123, 0);
+}
+
+.order-quantity .delete-quantity:active , .order-quantity .update-quantity:active {
+  color: rgb(107, 52, 1);
+}
+
 .order-image img{
   object-fit: contain;
   width: 100%;
@@ -79,6 +95,10 @@
   font-weight: bold;
   color: #029b12;
   font-size: 24px;
+}
+
+.date-choice-button{
+  cursor: pointer;
 }
 
 .order-shipping-charge{
